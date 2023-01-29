@@ -1,3 +1,12 @@
+# Keldion296
+A WIP fork of Don-jewelery using Ox_doorlock that currently only works with the main city vangelico.
+
+To use, name your door 'jewellery' in Ox_doorlock.
+
+Currently Auto-lock has an issue, make use of Ox_Doorlock's auto-lock feature?
+
+Plans: Make everything work as intended in the original script, any help is appreciated of course.
+
 # don-jewelery
 
 Jewelery Robbery for QBCore with 1 or 3 stores, Thermite, VarHack and auto-lock/unlock doors!
