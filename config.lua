@@ -15,11 +15,11 @@ Config.VangelicoHours = { -- Store Hours
     }
 } 
 
-Config.OneStore = false -- Set to true if using just the main Vangelico's Jewellers
+Config.OneStore = true -- Set to true if using just the main Vangelico's Jewellers
 Config.PSDispatch = true -- Set to false for base qb-policejob alerts or true to use ps-dispatch alerts
 
-Config.Cooldown = 5 * (60 * 2000) -- where x is minutes ie. x * (60 * 2000) \\ For door auto lock function
-Config.Timeout = 5 * (60 * 2000) -- where x is minutes ie. x * (60 * 2000) \\ For case smashing cooldown
+Config.Cooldown = 15 * (60 * 2000) -- where x is minutes ie. x * (60 * 2000) \\ For door auto lock function
+Config.Timeout = 60 * (60 * 2000) -- where x is minutes ie. x * (60 * 2000) \\ For case smashing cooldown
 Config.RequiredCops = 0
 
 Config.Doors = {

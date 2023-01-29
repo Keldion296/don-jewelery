@@ -145,3 +145,19 @@ RegisterNetEvent('don-jewellery:server:setTimeout', function()
         end)
     end
 end)
+
+-- working on doors
+
+RegisterServerEvent('qb-jewelery:client:Door', function()
+    local jewellery = exports.ox_doorlock:getDoorFromName('jewellery')
+
+    TriggerEvent('ox_doorlock:setState', jewellery.id, 0)
+    
+end)
+
+RegisterServerEvent('qb-jewelery:client:Doorlock', function()
+    local jewellery = exports.ox_doorlock:getDoorFromName('jewellery')
+
+    TriggerEvent('ox_doorlock:setState', jewellery.id, 1)
+    
+end)

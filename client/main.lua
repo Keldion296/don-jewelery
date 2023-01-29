@@ -44,35 +44,28 @@ local function isStoreHacked()
 end
 
 local function lockDoors(k) -- Locks Vangelico's front doors
-    TriggerEvent('qb-doorlock:client:setState', source, Config.Doors[k].main, true, src, false, false)
-    TriggerServerEvent('qb-doorlock:server:updateState', Config.Doors[k].main, true, false, false, true)
+    TriggerServerEvent('qb-jewelery:client:Doorlock')
 end
 
 local function unlockDoors(k) -- Unocks Vangelico's front doors
-    TriggerEvent('qb-doorlock:client:setState', source, Config.Doors[k].main, false, src, false, false)
-    TriggerServerEvent('qb-doorlock:server:updateState', Config.Doors[k].main, false, false, false, true)
+    TriggerServerEvent('qb-jewelery:client:Door')
 end
 
 local function lockAll() -- Locks all Vangelico's doors
     for k, v in pairs(Config.Doors) do
-        TriggerEvent('qb-doorlock:client:setState', source, v.main, true, src, false, false)
-        TriggerEvent('qb-doorlock:client:setState', source, v.sec, true, src, false, false)
+        TriggerServerEvent('qb-jewelery:client:Doorlock')
         if doorHacked then 
-            TriggerServerEvent('qb-doorlock:server:updateState', v.main, true, false, false, true)
-            TriggerServerEvent('qb-doorlock:server:updateState', v.sec, true, false, false, true)
+            TriggerServerEvent('qb-jewelery:client:Doorlock')
         end
     end
     doorLocked = true
 end
 
 local function unlockAll() -- Unlocks all Vangelico's doors
-    for k, v in pairs(Config.Doors) do
-        TriggerEvent('qb-doorlock:client:setState', source, v.main, false, src, false, false)
-        TriggerEvent('qb-doorlock:client:setState', source, v.sec, false, src, false, false)
-        if doorHacked then
-            TriggerServerEvent('qb-doorlock:server:updateState', v.main, false, false, false, true) 
-            TriggerServerEvent('qb-doorlock:server:updateState', v.sec, false, false, false, true)
-        end
+    --for k, v in pairs(Config.Doors) do
+    TriggerServerEvent('qb-jewelery:client:Door')
+    if doorHacked then
+        TriggerServerEvent('qb-jewelery:client:Door')
     end
     doorLocked = false
 end
